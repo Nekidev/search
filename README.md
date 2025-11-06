@@ -1,3 +1,5 @@
+![Demo](https://github.com/Nekidev/search/blob/main/assets/demo.gif?raw=true)
+
 # Nyeki's CLI Search
 
 Welcome to Nyeki's CLI Search! It's a small tool for searching Google from your terminal.
