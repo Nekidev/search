@@ -17,7 +17,7 @@ pub struct Query {
     #[arg(
         short,
         long,
-        help = "Your Google Custom Search Engine ID",
+        help = "Your Google Programmable Search Engine ID",
         env = "GOOGLE_CX"
     )]
     pub cx: String,

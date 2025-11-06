@@ -47,7 +47,10 @@ fn render_searching(frame: &mut Frame, state: &State) {
     let content = Paragraph::new(format!("Searching for '{}'...", state.query.query));
     frame.render_widget(content, body_area);
 
-    let footer = Line::styled("Press 'q' to quit", Style::new().bg(Color::White));
+    let footer = Line::styled(
+        format!("Press {} to quit", "Q".bold()),
+        Style::new().bg(Color::White).fg(Color::Black),
+    );
     frame.render_widget(footer, footer_area);
 }
 
@@ -76,13 +79,22 @@ fn render_results(frame: &mut Frame, state: &State) {
             Style::new()
                 .remove_modifier(Modifier::DIM)
                 .bg(Color::LightBlue)
-                .fg(Color::White),
+                .fg(Color::Black),
         )
         .highlight_symbol("> ");
 
     frame.render_stateful_widget(list, body_area, &mut state.list.write().unwrap());
 
-    let footer = Line::styled("Press 'q' to quit", Style::new().bg(Color::White));
+    let footer = Line::default()
+        .spans(vec![
+            Span::styled("Q", Style::new().bold()),
+            Span::raw(" to quit    "),
+            Span::styled("↑ and ↓", Style::new().bold()),
+            Span::raw(" to navigate    "),
+            Span::styled("Enter", Style::new().bold()),
+            Span::raw(" to open link"),
+        ])
+        .style(Style::new().bg(Color::White).fg(Color::Black));
     frame.render_widget(footer, footer_area);
 }
 

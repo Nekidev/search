@@ -1,11 +1,12 @@
 [package]
 name = "nyekis-search"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2024"
 authors = ["Nyeki"]
 description = "A terminal-based search tool using Google Search API."
 license = "MIT"
 repository = "https://github.com/Nekidev/search"
+readme = "README.md"
 
 [dependencies]
 clap = { version = "4.5.51", features = ["env", "derive"] }

@@ -1,4 +1,4 @@
-use std::{sync::Arc, thread};
+use std::{env, sync::Arc, thread};
 
 use clap::Parser;
 
@@ -13,7 +13,7 @@ mod state;
 mod tui;
 
 fn main() -> std::io::Result<()> {
-    dotenvy::dotenv().ok();
+    load_env();
 
     let query = Query::parse();
 
@@ -29,4 +29,14 @@ fn main() -> std::io::Result<()> {
     });
 
     tui::run(state)
+}
+
+fn load_env() {
+    if let Some(mut path) = env::home_dir() {
+        path.push(".config/nyekis-search/.env");
+
+        dotenvy::from_path(path).ok();
+    }
+
+    dotenvy::dotenv().ok();
 }

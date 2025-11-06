@@ -43,6 +43,16 @@ look something like this:
 Note the `?cx={CX}` query parameter in that tag? Copy it and save it in that `.env` file as
 `GOOGLE_CX=`.
 
+Your `.env` file will end up looking something like this:
+
+```conf
+GOOGLE_API_KEY=blahblahblah
+GOOGLE_CX=blahblah
+```
+
+> [!NOTE]
+> To persist this `.env` across your system, move the `.env` to `~/.config/nyekis-search/.env`.
+
 ## Running Nyeki's CLI Search
 
 That's it! Once those two environment variables are set, you can run
