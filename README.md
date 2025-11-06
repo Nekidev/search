@@ -25,9 +25,9 @@ downloadable binaries.
 Before being able to search stuff, you'll have to set up a Google API key and create a programmable
 search engine from the Google console.
 
-Head over to [this Google documentation page]() to create an API key. If you don't have any Google
-Cloud project, create one from the same popup. Grab the generated API key, you may want to store it
-in an `.env` file as `GOOGLE_API_KEY=`.
+Head over to [this Google Cloud Console page](https://console.cloud.google.com/apis/credentials) to
+create an API key. If you don't have any Google Cloud project, create one. Grab the generated API
+key, you may want to store it in an `.env` file as `GOOGLE_API_KEY=`.
 
 Once that's done, you'll need to create a programmable search engine. Head over to [this Google
 Cloud Console page](https://programmablesearchengine.google.com/controlpanel/create) to create a
@@ -47,7 +47,7 @@ Your `.env` file will end up looking something like this:
 
 ```conf
 GOOGLE_API_KEY=blahblahblah
-GOOGLE_CX=blahblah
+GOOGLE_CX=bc4ce04df5518cb73
 ```
 
 > [!NOTE]
