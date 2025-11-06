@@ -1,6 +1,6 @@
 [package]
 name = "nyekis-search"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024"
 authors = ["Nyeki"]
 description = "A terminal-based search tool using Google Search API."
